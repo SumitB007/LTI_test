@@ -22,7 +22,7 @@
                         "visibility": "admins",
                         "default": "disabled",
                         "message_type": "LtiResourceLinkRequest",
-                        "target_link_uri": "https://9001-sumitb007-ltitest-tqzr9hg17hc.ws-us81.gitpod.io/launch/"
+                        "target_link_uri": "https://9001-sumitb007-ltitest-tqzr9hg17hc.ws-us81.gitpod.io/launch/" , "_comment": "Change this link with your GITPOD or Codespace servers link",
                     }
                 ]
             },
@@ -39,7 +39,7 @@
     },
     "description": "Sumit-Test",
     "custom_fields": {},
-    "public_jwk_url": "https://9001-sumitb007-ltitest-tqzr9hg17hc.ws-us81.gitpod.io/jwks/",
-    "target_link_uri": "https://9001-sumitb007-ltitest-tqzr9hg17hc.ws-us81.gitpod.io/launch/",
-    "oidc_initiation_url": "https://9001-sumitb007-ltitest-tqzr9hg17hc.ws-us81.gitpod.io/login/"
+    "public_jwk_url": "https://9001-sumitb007-ltitest-tqzr9hg17hc.ws-us81.gitpod.io/jwks/",  "_comment2": "Change this link with your GITPOD or Codespace servers link",
+    "target_link_uri": "https://9001-sumitb007-ltitest-tqzr9hg17hc.ws-us81.gitpod.io/launch/", "_comment3": "Change this link with your GITPOD or Codespace servers link",
+    "oidc_initiation_url": "https://9001-sumitb007-ltitest-tqzr9hg17hc.ws-us81.gitpod.io/login/" , "_comment4": "Change this link with your GITPOD or Codespace servers link",
 }

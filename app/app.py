@@ -13,9 +13,9 @@ from pylti1p3.registration import Registration
 
 PAGE_TITLE = 'Canvas LTI Framework with API Integration'
 API_BASE = 'https://biztechcollege.instructure.com'
-CLIENT_ID_API = 187330000000000107
-CLIENT_SECRET_API = 'qRNvqmFP0my9gs2cyiDemPaTHdIQxfws4hemr4tqOk4REc06lkuvHmzV4xT2trjr'#18733~NH2yqQUAicdAUdUM2UsVECjW6RorTc0StQi82uL8YdSiCjkg9RTWcphF9UsIwEVM
-REDIRECT_URI_API = 'https://9001-sumitb007-ltitest-tqzr9hg17hc.ws-us81.gitpod.io/oauth/'
+CLIENT_ID_API = 187330000000000107  #API id of SUMit-LTT
+CLIENT_SECRET_API = 'qRNvqmFP0my9gs2cyiDemPaTHdIQxfws4hemr4tqOk4REc06lkuvHmzV4xT2trjr'#API key of Sumit-LTI
+REDIRECT_URI_API = 'https://9001-sumitb007-ltitest-tqzr9hg17hc.ws-us81.gitpod.io/oauth/' #GITPOD server - Need to change this  
 OAUTH_URL = '{}/login/oauth2/auth?client_id={}&response_type=code&redirect_uri={}&state=BIZTECH'.format(
     API_BASE,
     CLIENT_ID_API,
@@ -139,11 +139,11 @@ def get_site_assess_submission(canvas_site_id, access_token,assignment_id,user_i
     r = requests.put(api, params=params, headers=headers).json()
     return r
 
-'''def assess(x):
+def assess(x):
     if(x=="pass"):
         return 10
     else:
-        return 0'''
+        return 0
   
 
 @app.route('/login/', methods=['GET', 'POST'])
@@ -200,7 +200,6 @@ def dance():
 
 @app.route('/oauth/', methods=['GET', 'POST'])
 def oauth():
-
     tool_conf = ToolConfJsonFile(get_lti_config_path())
     flask_request = FlaskRequest()
     launch_data_storage = get_launch_data_storage()
@@ -221,9 +220,8 @@ def oauth():
         total_students = get_site_student_enrollment_count(course_id, r['access_token'])
         total_assignments = get_site_assignment_count(course_id,r['access_token'])
         student_names = get_site_student_names(course_id,r['access_token'])
-        student_submissions = get_site_student_submissions(course_id, r['access_token'], 2851)
-        submission_assessment = get_site_assess_submission(course_id, r['access_token'], 2851, 709, 30)
     
+
     '''if (request.method == "POST"):
         Sub1 = request.form.get("Sub1")
         Sub2 = request.form.get("Sub2")
@@ -241,8 +239,7 @@ def oauth():
 
         submission_assessment = get_site_assess_submission(log_creds['course_id'], log_creds['access_token'], assign_id, student_id, marks)
         
-        return redirect(request.referrer)'''
-    
+    '''
     params = {
         'code': code,
         'access_token': r['access_token'],
@@ -261,11 +258,11 @@ def oauth():
         'course_total_assignments': total_assignments,
         'student_names': student_names,
         'student_submissions' : student_submissions,
-        'submission_assessment' : submission_assessment,
+        #'submission_assessment' : submission_assessment,
         
     }
     
-    ##log_creds.update(params)
+    #log_creds.update(params)
 
     return render_template('index.html', **params)
 

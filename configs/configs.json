@@ -23,14 +23,14 @@
     }],
     "https://canvas.instructure.com": [{
         "default": true,
-        "client_id": "187330000000000106",
+        "client_id": "187330000000000106",  "_comment": "CANVAS Sumit-LTI LTI id",
         "auth_login_url": "https://biztechcollege.instructure.com/api/lti/authorize_redirect",
         "auth_token_url": "https://biztechcollege.instructure.com/login/oauth2/token",
         "key_set_url": "https://biztechcollege.instructure.com/api/lti/security/jwks",
         "key_set": null,
         "private_key_file": "private.key",
         "public_key_file": "public.key",
-        "deployment_ids": ["347:0bb00a627599fe31ab7f212535d8b5efd9e4dab7"]
+        "deployment_ids": ["347:0bb00a627599fe31ab7f212535d8b5efd9e4dab7"] ,  "_comment2": "CANVAS Sumit-LTI DEPLOYMENT ID"
     }],
     "ltiadvantagevalidator.imsglobal.org": [{
         "default": true,
